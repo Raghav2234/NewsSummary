@@ -20,8 +20,7 @@ def server_start():
 	app.run()
 	# app.run(host=env.HOST, debug=env.DEBUG, port=env.PORT)
 
-#if __name__ == '__main__':
-def main():
+if __name__ == '__main__':
 	populate.update_news()
 	data, dbconnected = populate.retrieve_data()
 	p1 = multiprocessing.Process(target=server_start)
