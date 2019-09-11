@@ -6,7 +6,8 @@ import os
 
 app = Flask(__name__)
 CORS(app)
-
+populate.update_news()
+data, dbconnected = populate.retrieve_data()
 @app.route('/news')
 @app.route('/')
 def get_news():
@@ -20,13 +21,8 @@ def server_start():
 	#app.run(debug=True)
 	app.run(port = int(os.environ['PORT']))
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
 # def main(a, b):
-	populate.update_news()
-	data, dbconnected = populate.retrieve_data()
-	p1 = multiprocessing.Process(target=server_start)
-	p2 = multiprocessing.Process(target=populate.schedule)
-	p2.start()
-	p1.start()
-	p2.join()
-	p1.join()
+p2 = multiprocessing.Process(target=populate.schedule)
+p2.start()
+p2.join()
