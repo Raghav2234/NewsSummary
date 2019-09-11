@@ -18,7 +18,7 @@ def get_news():
 print(int(os.environ.get['PORT']))
 def server_start():
 	#app.run(debug=True)
-	app.run(port = int(os.environ.get['PORT']))
+	app.run(port = int(os.environ['PORT']))
 
 if __name__ == '__main__':
 	populate.update_news()
