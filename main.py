@@ -18,13 +18,9 @@ def get_news():
 
 p2 = multiprocessing.Process(target=populate.schedule)
 p2.start()
-p2.join()
 	
 if __name__ == '__main__':
-	app.run()
-	
-print(int(os.environ['PORT']))
+	app.run()	
+p2.join()
 
-# if __name__ == '__main__':
-# def main(a, b):
 
