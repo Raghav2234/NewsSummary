@@ -17,7 +17,7 @@ def get_news():
 	return jsonify(result=data)
 	
 if __name__ == '__main__':
-	print("app started")
+	print("app start")
 	app.run()	
 
 
