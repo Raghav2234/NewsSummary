@@ -17,12 +17,12 @@ def get_news():
 	return jsonify(result=data)
 
 print(int(os.environ['PORT']))
-def server_start():
-	#app.run(debug=True)
-	app.run(port = int(os.environ['PORT']))
+# def server_start():
+# 	#app.run(debug=True)
+# 	app.run(port = int(os.environ['PORT']))
 
 # if __name__ == '__main__':
 # def main(a, b):
-p2 = multiprocessing.Process(target=populate.schedule)
-p2.start()
-p2.join()
+# p2 = multiprocessing.Process(target=populate.schedule)
+# p2.start()
+# p2.join()
