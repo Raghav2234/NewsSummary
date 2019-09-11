@@ -15,10 +15,10 @@ def get_news():
 		data, dbconnected = populate.retrieve_data()
 	return jsonify(result=data)
 
-
+print(int(os.environ.get['PORT']))
 def server_start():
 	#app.run(debug=True)
-	app.run(port = int(os.environ.get['PORT']) or 3000)
+	app.run(port = int(os.environ.get['PORT']))
 
 if __name__ == '__main__':
 	populate.update_news()
