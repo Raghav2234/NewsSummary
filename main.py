@@ -15,7 +15,8 @@ def get_news():
 	if not dbconnected:
 		data, dbconnected = populate.retrieve_data()
 	return jsonify(result=data)
-
+if __name__ == '__main__':
+	app.run()
 print(int(os.environ['PORT']))
 # def server_start():
 # 	#app.run(debug=True)
