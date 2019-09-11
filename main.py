@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from NewsSummarizer import populate
 import multiprocessing
-
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -18,7 +18,7 @@ def get_news():
 
 def server_start():
 	#app.run(debug=True)
-	app.run(host=env.HOST, debug=env.DEBUG, port=env.PORT)
+	app.run(port=os.environ.get['PORT'] || 3000)
 
 if __name__ == '__main__':
 	populate.update_news()
