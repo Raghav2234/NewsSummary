@@ -15,7 +15,7 @@ def get_news():
 		data, dbconnected = populate.retrieve_data()
 	return jsonify(result=data)
 
-print(int(os.environ.get['PORT']))
+print(int(os.environ['PORT']))
 def server_start():
 	#app.run(debug=True)
 	app.run(port = int(os.environ['PORT']))
