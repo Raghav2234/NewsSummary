@@ -17,8 +17,8 @@ def get_news():
 
 
 def server_start():
-	app.run(debug=True)
-	# app.run(host=env.HOST, debug=env.DEBUG, port=env.PORT)
+	#app.run(debug=True)
+	app.run(host=env.HOST, debug=env.DEBUG, port=env.PORT)
 
 if __name__ == '__main__':
 	populate.update_news()
