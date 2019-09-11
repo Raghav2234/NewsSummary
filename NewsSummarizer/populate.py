@@ -65,6 +65,7 @@ def update_news():
 
 
 def schedule():
+    print("Scheduler started")
     global db, dbconnected, data
     while True:
         time.sleep(60*60*24)
