@@ -15,13 +15,9 @@ def get_news():
 	if not dbconnected:
 		data, dbconnected = populate.retrieve_data()
 	return jsonify(result=data)
-
-p2 = multiprocessing.Process(target=populate.schedule)
-p2.start()
 	
 if __name__ == '__main__':
 	print("app started")
 	app.run()	
-p2.join()
 
 
