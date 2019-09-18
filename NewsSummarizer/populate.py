@@ -56,7 +56,7 @@ def HeadLines():
 def update_news():
     global db, dbconnected
     if not dbconnected:
-        print("not connected to database, no caching of result")
+        print("not connected  to database, no caching of result")
         return
     db.News.drop()
     datas = HeadLines()
