@@ -46,7 +46,8 @@ def HeadLines():
                  "tag" : getTag(ar["categories"][0]["label"]),
                  "img" : ar["image"],
                  "dateTime" : ar["dateTime"],
-                 "src" : ar["source"]["uri"]
+                 "src" : ar["source"]["uri"],
+                 "url" : ar["url"]
         }
         data.append(val)
     return data
