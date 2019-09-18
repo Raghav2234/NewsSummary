@@ -16,7 +16,7 @@ def Summarizer(arg):
     summary = summarizer(parser.document, 4)
     string_summary = ""
     for sentence in summary:
-       string_summary += str(sentence) + '.'
+       string_summary += str(sentence) 
     return string_summary
 
 
