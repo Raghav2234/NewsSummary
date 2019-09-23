@@ -43,7 +43,8 @@ def HeadLines():
         val = {
                  "head_line" : ar["title"],
                  "content" : Summarizer(ar["body"]), 
-                 "tag" : getTag(ar["categories"][0]["label"]),
+#                  "tag" : getTag(ar["categories"][0]["label"]),
+                 "tag" : sports,
                  "img" : ar["image"],
                  "dateTime" : ar["dateTime"],
                  "src" : ar["source"]["uri"],
